@@ -57,9 +57,11 @@ dependencies {
     implementation 'com.yqritc:recyclerview-flexibledivider:1.4.0'
 
     // Dagger dependencies
-//    compile "com.google.dagger:dagger-android-support:$daggerVersion"
-//    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
-//    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:${daggerVersion}"
+    kapt "com.google.dagger:dagger-android-processor:${daggerVersion}" //new
+    implementation "com.google.dagger:dagger:${daggerVersion}"
+    implementation "com.google.dagger:dagger-android:${daggerVersion}" //new
+    implementation "com.google.dagger:dagger-android-support:${daggerVersion}"
     
 
 }

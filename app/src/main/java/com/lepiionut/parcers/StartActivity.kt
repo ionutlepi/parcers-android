@@ -1,24 +1,28 @@
 package com.lepiionut.parcers
 
-import android.app.Activity
-import android.app.Application
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.app.ActivityCompat
-import android.support.v4.app.SupportActivity
-import android.util.Log
+import android.support.v7.widget.LinearLayoutManager
+import com.lepiionut.parcers.adapters.ListAdapter
 import com.lepiionut.parcers.realm.models.Product
-
+import dagger.android.support.DaggerAppCompatActivity
+import io.reactivex.Observable
 import io.realm.Realm
-import io.realm.RealmChangeListener
-import io.realm.RealmConfiguration
+import kotlinx.android.synthetic.main.activity_start.*
+import javax.inject.Inject
 
-class StartActivity : AppCompatActivity() {
+class StartActivity : DaggerAppCompatActivity() {
+
+    @Inject
+    lateinit var realm: Observable<Realm>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
-
+        realm.subscribe {
+            val products = it.where(Product::class.java).findAll()
+            list.layoutManager = LinearLayoutManager(this@StartActivity, LinearLayoutManager.VERTICAL, false)
+            list.adapter = ListAdapter(products, this@StartActivity)
+        }
     }
 
     companion object {
