@@ -7,6 +7,7 @@ import io.reactivex.Observable
 import io.reactivex.subjects.BehaviorSubject
 import io.realm.*
 import javax.inject.Named
+import javax.inject.Singleton
 
 
 /**
@@ -16,6 +17,7 @@ import javax.inject.Named
 class RealmModule {
 
     @Provides
+    @Singleton
     fun provideRealm(@Named("realmURL") url: String, @Named("realmURI") uri: String, sync: SyncCredentials): Observable<Realm> {
         val bus = BehaviorSubject.create<Realm>()
         SyncUser.loginAsync(sync, url, object : SyncUser.Callback {

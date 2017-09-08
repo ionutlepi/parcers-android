@@ -13,7 +13,7 @@ import javax.inject.Singleton
  * Created by ionut.lepadatescu on 25/08/2017.
  */
 @Singleton
-@Component(modules = arrayOf(AndroidSupportInjectionModule::class, ConfigModule::class, AppModule::class, StartActivityBinding::class))
+@Component(modules = arrayOf(AndroidSupportInjectionModule::class, ConfigModule::class, AppModule::class, StartActivityBinding::class, RealmModule::class))
 interface AppComponent : AndroidInjector<DaggerApplication> {
 
     override fun inject(instance: DaggerApplication)

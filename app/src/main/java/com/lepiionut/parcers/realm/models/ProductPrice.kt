@@ -10,9 +10,11 @@ import java.util.*
 
 open class ProductPrice: RealmObject() {
 
-    @Required var value: Double? = null
 
-    @Required var syncDate: Date? = null
+    var value: Double = 0.0
+
+    @Required
+    lateinit var syncDate: Date
 
     var source: ProductSource? = null
 }

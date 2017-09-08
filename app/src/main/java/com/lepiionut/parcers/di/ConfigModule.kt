@@ -20,7 +20,7 @@ class ConfigModule {
     @Provides
     @Named("realmHost")
     fun realmHost(): String {
-        return "192.168.0.104"
+        return "10.100.1.52"
     }
 
     @Provides
