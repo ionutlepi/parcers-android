@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Parcers</string>
     <string name="list_products">Produse</string>
+    <string name="product_name_hint">Product name</string>
 </resources>
