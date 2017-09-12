@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lepiionut.parcers.StartActivity">
+    tools:context="com.lepiionut.parcers.products.StartActivity">
 
 
     <android.support.design.widget.TextInputLayout
@@ -21,6 +21,15 @@
             />
     </android.support.design.widget.TextInputLayout>
 
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/chart"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name"
+        android:layout_margin="@dimen/margin_default"/>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/sourceList"
         android:layout_width="0dp"
@@ -28,7 +37,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/chart"
         tools:listitem="@layout/simple_list_item"/>
 
     <android.support.design.widget.FloatingActionButton

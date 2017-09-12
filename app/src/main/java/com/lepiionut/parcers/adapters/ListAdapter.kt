@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.lepiionut.parcers.R
-import com.lepiionut.parcers.SimpleListItem
+import com.lepiionut.parcers.products.SimpleListItem
 import kotlinx.android.synthetic.main.simple_list_item.view.*
 
 /**

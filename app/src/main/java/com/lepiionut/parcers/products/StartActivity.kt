@@ -1,7 +1,8 @@
-package com.lepiionut.parcers
+package com.lepiionut.parcers.products
 
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import com.lepiionut.parcers.R
 import com.lepiionut.parcers.adapters.ListAdapter
 import com.lepiionut.parcers.realm.models.Product
 import dagger.android.support.DaggerAppCompatActivity
@@ -9,6 +10,7 @@ import io.reactivex.Observable
 import io.realm.Realm
 import kotlinx.android.synthetic.main.activity_start.*
 import javax.inject.Inject
+
 
 class StartActivity : DaggerAppCompatActivity() {
 

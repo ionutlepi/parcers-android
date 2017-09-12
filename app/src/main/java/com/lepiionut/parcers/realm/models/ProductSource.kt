@@ -1,8 +1,9 @@
 package com.lepiionut.parcers.realm.models
 
-import com.lepiionut.parcers.SimpleListItem
+import com.lepiionut.parcers.products.SimpleListItem
 import com.lepiionut.parcers.products.ProductSourceForm
 import io.realm.RealmObject
+import io.realm.annotations.LinkingObjects
 import io.realm.annotations.PrimaryKey
 import io.realm.annotations.Required
 
@@ -30,6 +31,4 @@ open  class  ProductSource: RealmObject(), SimpleListItem {
     var url: String? = null
 
     var product: Product? = null
-
-
 }

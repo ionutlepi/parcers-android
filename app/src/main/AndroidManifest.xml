@@ -11,14 +11,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         >
-        <activity android:name=".StartActivity"
+        <activity android:name=".products.StartActivity"
             android:label="@string/list_products">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProductViewActivity" />
+        <activity android:name=".products.ProductViewActivity" />
         <activity android:name=".products.ProductSourceForm"
             android:label="@string/product_sources"/>
     </application>

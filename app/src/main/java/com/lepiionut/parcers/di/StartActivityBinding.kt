@@ -1,7 +1,7 @@
 package com.lepiionut.parcers.di
 
-import com.lepiionut.parcers.ProductViewActivity
-import com.lepiionut.parcers.StartActivity
+import com.lepiionut.parcers.products.ProductViewActivity
+import com.lepiionut.parcers.products.StartActivity
 import dagger.Module
 import dagger.android.AndroidInjectionModule
 import dagger.android.ContributesAndroidInjector
